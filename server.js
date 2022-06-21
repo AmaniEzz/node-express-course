@@ -37,7 +37,7 @@ app.post("/login", function (req, res) {
 
     if (username === mockUsername && password === mockPassword) {
         // In practice, use JSON web token sign method here to make an encrypted token
-        req.json({
+        res.json({
             success: true,
             message: "username and password match!",
             token: "crypted token goes here"
